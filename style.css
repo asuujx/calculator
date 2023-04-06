@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10%;
+    padding: 1rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-evenly;
+}
+
+.btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    background-color: transparent;
+}
+.spec {
+    color: #32E0C4;
+}
+
+.total {
+    background-color: #32E0C4;
+    color: white;
+}
+
+.result-container {
+    text-align: right;
+}
+
+.history-container {
+    text-align: right;
+}
