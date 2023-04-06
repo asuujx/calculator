@@ -21,7 +21,7 @@ numberBtns.forEach((numberBtn) => {
         let currentNumber = numberBtn.textContent;
         // console.log(currentNumber);
 
-        (resultBox.textContent == "0" || resultBox.textContent == "Cannot divide by zero") 
+        (resultBox.textContent == "0" || resultBox.textContent == "ERROR") 
             ? resultBox.textContent = currentNumber
             : resultBox.textContent += currentNumber
 
@@ -48,7 +48,7 @@ dotBtn.addEventListener('click', () => {
 
 operationBtns.forEach((operationBtn) => {
     operationBtn.addEventListener('click', () => {
-        if(resultBox.textContent === "Cannot divide by zero") return;
+        if(resultBox.textContent === "ERROR") return;
 
         if(operation.length === 0) {
             operation = operationBtn.textContent;
@@ -102,7 +102,7 @@ operationBtns.forEach((operationBtn) => {
 })
 
 totalBtn.addEventListener('click', () => {
-    if(resultBox.textContent === "Cannot divide by zero") return;
+    if(resultBox.textContent === "ERROR") return;
     
     number2 = parseFloat(resultBox.textContent);
     
@@ -121,7 +121,7 @@ totalBtn.addEventListener('click', () => {
             break;
         case "÷":
             if(number2 === 0) {
-                resultBox.textContent = "Cannot divide by zero";
+                resultBox.textContent = "ERROR";
                 return;
             } else {
                 result = number1 / number2;
@@ -148,7 +148,7 @@ clearAllBtn.addEventListener('click', () => {
 })
 
 deleteBtn.addEventListener('click', () => {
-    if(resultBox.textContent === "Cannot divide by zero") {
+    if(resultBox.textContent === "ERROR") {
         resultBox.textContent = "0";
         historyBox.textContent = "";
         number1 = number2 = 0;
@@ -164,6 +164,6 @@ deleteBtn.addEventListener('click', () => {
 })
 
 negateBtn.addEventListener('click', () => {
-    if(resultBox.textContent === "Cannot divide by zero") return;
+    if(resultBox.textContent === "ERROR") return;
     resultBox.textContent = parseFloat(resultBox.textContent) * (-1);
 })
