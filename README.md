@@ -1,8 +1,6 @@
-# js-calculator
+# Calculator
 Minimalistic calculator design built in Javascript.
-Features:
-- Addition
-- Subtraction
-- Division
-- Multiplication
-- Number negation
+
+### Screenshot
+
+![](./resources/screenshot.png)
